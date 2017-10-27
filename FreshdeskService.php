@@ -38,7 +38,7 @@ class FreshdeskService{
         $data = array(
             "requester_id"      => $requester_id,
             "responder_id"      => $responder_id,
-            "call+reference_id" => $call_id,
+            "call_reference_id" => $call_id,
             "responder_email"   => $responder_email,
             "new_ticket"        => true
         );
