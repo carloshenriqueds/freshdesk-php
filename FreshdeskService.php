@@ -24,17 +24,17 @@ class FreshdeskService{
     }
     
     function listContatoByPhone($phone){
-        $host = $this-getHost().CONTATO_EP."?phone=".$phone;
+        $host = $this->getHost().CONTATO_EP."?phone=".$phone;
         return $this->requestGet($host);
     }
 
     function listAgentByPhone($phone){
-        $host = $this-getHost().AGENTE_EP."?phone=".$phone;
+        $host = $this->getHost().AGENTE_EP."?phone=".$phone;
         return $this->requestGet($host);
     }
 
     function novoTicketCti($requester_id, $responder_id, $call_id, $responder_email){
-        $host = $this-getHost().TICKET_CTI_EP;
+        $host = $this->getHost().TICKET_CTI_EP;
         $data = array(
             "requester_id"      => $requester_id,
             "responder_id"      => $responder_id,
@@ -46,7 +46,7 @@ class FreshdeskService{
     }
 
     function novoContato($email, $phone){
-        $host = $this-getHost().CONTATO_EP;
+        $host = $this->getHost().CONTATO_EP;
         $data = array(
             "email "      => $email,
             "phone "      => $phone
